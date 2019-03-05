@@ -1,3 +1,6 @@
 [submodule ".anyenv"]
 	path = .anyenv
 	url = git@github.com:anyenv/anyenv
+[submodule ".config/anyenv/anyenv-install"]
+	path = .config/anyenv/anyenv-install
+	url = git@github.com:anyenv/anyenv-install
