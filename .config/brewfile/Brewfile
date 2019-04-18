@@ -1,0 +1,61 @@
+
+# tap repositories and their packages
+
+tap homebrew/core
+brew cairo
+brew coreutils
+brew exiftool
+brew fontconfig
+brew freetype
+brew gdbm
+brew gettext
+brew glib
+brew gmp
+brew gnutls
+brew gobject-introspection
+brew htop
+brew hugo
+brew icu4c
+brew jpeg
+brew libffi
+brew libpng
+brew libtasn1
+brew libtiff
+brew libunistring
+brew little-cms2
+brew mas
+brew mysql@5.7
+brew nettle
+brew nkf
+brew openjpeg
+brew openssl
+brew p11-kit
+brew pcre
+brew pixman
+brew pkg-config
+brew poppler
+brew readline
+brew sqlite
+brew xz
+brew zsh
+
+tap homebrew/cask
+cask dropbox
+cask google-chrome
+cask mactex
+
+tap argon/mas
+
+tap rcmdnk/file
+brew brew-file
+
+# Other Cask applications
+cask google-backup-and-sync
+cask google-japanese-ime
+cask texstudio
+
+# App Store applications
+appstore 497799835  (10.2)
+appstore 803453959  (3.3.8)
+appstore 539883307  (5.15.0)
+appstore 409183694  (9.0.1)
