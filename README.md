@@ -13,3 +13,7 @@ $ ./install.sh
 ```
 $ git submodule update --init --recursive
 ```
+- brewの再構築
+```
+$ brew file install Brewfile
+```
