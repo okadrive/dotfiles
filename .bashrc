@@ -9,6 +9,8 @@ alias rm='rm -i'
 
 PATH=$HOME/bin:$PATH
 export PATH
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -42,3 +44,55 @@ GIT_PS1_SHOWSTASHSTATE=true
 
 # change hostname color
 PS1='\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01m\]\w\[\033[31m\]$(__git_ps1)\n\[\033[01;32m\]\\$\[\033[00m\] '
+
+export HISTCONTROL=ignoreboth:erasedups # 重複履歴を無視
+HISTSIZE=5000 # historyに記憶するコマンド数
+HISTIGNORE="fg*:bg*:history*:h*" # historyなどの履歴を保存しない
+HISTTIMEFORMAT='%Y.%m.%d %T' # historyに時間を追加
+
+# peco for bash
+peco-history() {
+  local NUM=$(history | wc -l)
+  local FIRST=$((-1*(NUM-1)))
+
+  if [ $FIRST -eq 0 ] ; then
+    # Remove the last entry, "peco-history"
+    history -d $((HISTCMD-1))
+    echo "No history" >&2
+    return
+  fi
+
+  local CMD=$(fc -l $FIRST | sort -k 2 -k 1nr | uniq -f 1 | sort -nr | sed -E 's/^[0-9]+[[:blank:]]+//' | peco | head -n 1)
+
+  if [ -n "$CMD" ] ; then
+    # Replace the last entry, "peco-history", with $CMD
+    history -s $CMD
+
+    if type osascript > /dev/null 2>&1 ; then
+      # Send UP keystroke to console
+      (osascript -e 'tell application "System Events" to keystroke (ASCII character 30)' &)
+    fi
+
+    # Uncomment below to execute it here directly
+    # echo $CMD >&2
+    # eval $CMD
+  else
+    # Remove the last entry, "peco-history"
+    history -d $((HISTCMD-1))
+  fi
+}
+
+bind '"\C-r":"peco-history\n"'
+bind '"\C-xr": reverse-search-history'
+
+# ssh with using peco for bash
+peco-ssh() {
+  local HOST=$(grep 'host ' ~/.ssh/config | awk '{print $2}' | peco)
+  if [ -n "$HOST" ]; then
+  echo "ssh -F ~/.ssh/config $HOST"
+          ssh -F ~/.ssh/config $HOST
+  fi
+}
+  
+alias s="peco-ssh"
+#bind '"\C-s":"peco-ssh\n"'
