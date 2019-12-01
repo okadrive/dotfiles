@@ -1,0 +1,13 @@
+_HiStOrY_V2_
+$holidays\040=\040\134Yasumi\134Yasumi::create('Japan',\040'2019',\040'ja_JP');
+foreach($holidays\040as\040$holiday){\040echo\040$holiday\040.\040':'\040.\040$holiday->getName()\040.\040PHP_EOL;\040}
+$holidays\040=\040\134Yasumi\134Yasumi::create('Japan',\040'2020',\040'ja_JP');
+foreach($holidays\040as\040$holiday){\040echo\040$holiday\040.\040':'\040.\040$holiday->getName()\040.\040PHP_EOL;\040}
+exit
+$holidays\040=\040\134Yasumi\134Yasumi::create('Japan',\040'2018',\040'ja_JP');
+foreach($holidays\040as\040$holiday){\040echo\040$holiday\040.\040':'\040.\040$holiday->getName()\040.\040PHP_EOL;\040}
+$holidays\040=\040\134Yasumi\134Yasumi::create('Japan',\040'2019',\040'ja_JP');
+foreach($holidays\040as\040$holiday){\040echo\040$holiday\040.\040':'\040.\040$holiday->getName()\040.\040PHP_EOL;\040}
+$holidays\040=\040\134Yasumi\134Yasumi::create('Japan',\040'2020',\040'ja_JP');
+foreach($holidays\040as\040$holiday){\040echo\040$holiday\040.\040':'\040.\040$holiday->getName()\040.\040PHP_EOL;\040}
+exit

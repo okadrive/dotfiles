@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/okapy/.config/texstudio'
 let g:netrw_dirhist_2='/Users/okapy/dotfiles/.config/anyenv/anyenv-install'
 let g:netrw_dirhist_3='/Users/okapy/Desktop/lab/m1/graph/.idea'
 let g:netrw_dirhist_4='/Users/okapy/Catalogue/Catlib/SQL'
+let g:netrw_dirhist_5='/Users/okapy/.vscode'
+let g:netrw_dirhist_6='/Users/okapy/Desktop/invio/audit-system/pref_color/png/land/png'
+let g:netrw_dirhist_7='/Users/okapy/Desktop/invio/audit-system/pref_color/png/land'
+let g:netrw_dirhist_8='/Users/okapy/Desktop/lab/m1/graph/.idea'
