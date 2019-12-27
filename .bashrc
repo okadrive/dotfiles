@@ -7,10 +7,11 @@ alias bh='vim ~/.bash_history'
 alias mysql='mysql -u root -proot'
 alias rm='rm -i'
 
-PATH=$HOME/bin:$PATH
-export PATH
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
+#PATH=$HOME/bin:$PATH
+#export PATH
+GOPATH=$HOME/go
+#export PATH=$GOPATH/bin:$PATH
+export PATH=$PATH:$HOME/bin:$GOPATH/bin
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
