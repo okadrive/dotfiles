@@ -46,15 +46,15 @@ GIT_PS1_SHOWSTASHSTATE=true
 # change hostname color
 PS1='\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01m\]\w\[\033[31m\]$(__git_ps1)\n\[\033[01;32m\]\\$\[\033[00m\] '
 
-export HISTCONTROL=ignoreboth:erasedups # $B=EJ#MzNr$rL5;k(B
-HISTSIZE=5000 # history$B$K5-21$9$k%3%^%s%I?t(B
-HISTIGNORE="fg*:bg*:history*:h*" # history$B$J$I$NMzNr$rJ]B8$7$J$$(B
-HISTTIMEFORMAT='%Y.%m.%d %T' # history$B$K;~4V$rDI2C(B
+export HISTCONTROL=ignoreboth:erasedups # 重複履歴を無視
+HISTSIZE=5000 # history に記憶するコマンド数
+HISTIGNORE="fg*:bg*:history*:h*" # history などの履歴を保存しない
+HISTTIMEFORMAT='%Y.%m.%d %T' # history に時間を追加
 
 # peco for bash
 peco-history() {
   local NUM=$(history | wc -l)
-  local FIRST=$((-1*(NUM-1)))
+  local FIRST=$((-1*(NUM-1))
 
   if [ $FIRST -eq 0 ] ; then
     # Remove the last entry, "peco-history"
@@ -94,11 +94,23 @@ peco-ssh() {
           ssh -F ~/.ssh/config $HOST
   fi
 }
-  
+
 alias s="peco-ssh"
 #bind '"\C-s":"peco-ssh\n"'
 
-function peco-cd {
+peco-connectwifi() {
+  # SSID 名を取得
+  local SSID=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport --scan | sed '1d' | awk '{print $1}' | sort -n | uniq | peco)
+  if [ -n "$SSID" ]; then
+    # SSID に接続 (sudo パスワードと，設定されている場合は Wi-Fi パスワードが聞かれる)
+    echo "sudo networksetup -setairportnetwork en0 $SSID"
+    sudo networksetup -setairportnetwork en0 $SSID
+  fi
+}
+
+alias cw="peco-connectwifi"
+
+peco-cd() {
   local sw="1"
   while [ "$sw" != "0" ]
    do
