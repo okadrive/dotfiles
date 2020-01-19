@@ -54,7 +54,7 @@ HISTTIMEFORMAT='%Y.%m.%d %T' # history に時間を追加
 # peco for bash
 peco-history() {
   local NUM=$(history | wc -l)
-  local FIRST=$((-1*(NUM-1))
+  local FIRST=$((-1*(NUM-1)))
 
   if [ $FIRST -eq 0 ] ; then
     # Remove the last entry, "peco-history"
