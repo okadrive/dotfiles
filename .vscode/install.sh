@@ -1,0 +1,24 @@
+# 設定を共有したいマシンで予めインストール済みのエクステンションを書き出しておく
+# $code --list-extensions > extensions.txt
+
+# vscodeがインストールされている場合のみ
+if [ -e ~/Library/Application\ Support/Code/User ]; then
+    cd ~/Library/Application\ Support/Code/User
+
+    # 前の設定をバックアップ
+    mv settings.json settings.json.bak
+    mv keybindings.json keybindings.json.bak
+    mv snippets snippets.bak
+
+    # ~/dotfiles/.vscode以下に他マシンと共有したい設定ファイルが置かれている想定
+    #
+    # 元の設定ファイルの代わりにシンボリックリンクを置いておく
+    ln -is ~/dotfiles/.vscode/settings.json
+    ln -is ~/dotfiles/.vscode/keybindings.json
+    ln -is ~/dotfiles/.vscode/snippets
+
+    # 他マシンで書き出されたエクステンション一覧を使ってインストール
+    for extension in `cat ~/dotfiles/.vscode/extensions.txt`; do
+        code --install-extension $extension
+    done
+fi

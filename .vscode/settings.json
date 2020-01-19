@@ -1,0 +1,72 @@
+{
+    "markdown-pdf.styles": [
+        "file:///Users/okapy/.vscode/markdown-pdf.css",
+    ],
+    "latex-workshop.latex.tools": [
+        {   
+            "name":"ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+                "-l",
+                "-ot",
+                "-kanji=utf8 -synctex=1",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "pbibtex",
+            "command": "pbibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "ptex2pdf",
+            "tools": [
+                "ptex2pdf"
+            ]
+        },
+        {
+            "name": "toolchain with bib",
+            "tools": [
+                "ptex2pdf",
+                "pbibtex",
+                "ptex2pdf",
+                "ptex2pdf",
+            ],
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "window.zoomLevel": 0,
+    "editor.renderControlCharacters": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.wordWrap": "on",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.autoSave": "afterDelay",
+    "python.jediEnabled": false,
+    "editor.formatOnSave": true,
+}
