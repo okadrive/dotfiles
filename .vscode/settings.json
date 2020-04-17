@@ -3,8 +3,8 @@
         "file:///Users/okapy/.vscode/markdown-pdf.css",
     ],
     "latex-workshop.latex.tools": [
-        {   
-            "name":"ptex2pdf",
+        {
+            "name": "ptex2pdf",
             "command": "ptex2pdf",
             "args": [
                 "-l",
@@ -60,7 +60,7 @@
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.renderControlCharacters": true,
     "workbench.colorTheme": "Visual Studio Dark",
     "editor.wordWrap": "on",
@@ -69,4 +69,9 @@
     "files.autoSave": "afterDelay",
     "python.jediEnabled": false,
     "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, SpaceBeforeParens: ControlStatements, IndentWidth: 2 }",
+    "editor.copyWithSyntaxHighlighting": false,
 }
