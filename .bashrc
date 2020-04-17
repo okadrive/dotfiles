@@ -11,7 +11,7 @@ alias rm='rm -i'
 #export PATH
 GOPATH=$HOME/go
 #export PATH=$GOPATH/bin:$PATH
-export PATH=$PATH:$HOME/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/bin:$GOPATH/bin:$GOPATH/1.13.0/bin/
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
