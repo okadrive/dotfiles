@@ -7,12 +7,11 @@ alias bh='vim ~/.bash_history'
 alias mysql='mysql -u root -proot'
 alias rm='rm -i'
 
-function gtest() {
+function cpptest() {
   g++-9 ./main_test.cpp
   ./a.out
 }
-alias gtest=gtest
-
+alias cpptest=cpptest
 
 #PATH=$HOME/bin:$PATH
 #export PATH
