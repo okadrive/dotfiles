@@ -10,21 +10,25 @@ Session.vim
 .netrwhist
 # Emacs
 .\#*
+
 # Backup files
 #---------------------------
 *~
 *.orig
 *.bak
+
 # yyyyMMdd
 *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]
 # yyyyMMddHHmm
 *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]
 # yyyyMMddHHmmss
 *.[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]
+
 # OS dependent files
 #---------------------------
 .DS_Store
 Thumbs.db
+
 # Bundler specific
 #---------------------------
 /vendor/bundle/
@@ -34,3 +38,6 @@ Thumbs.db
 *.tmp
 # Vagrant specific
 .vagrant/
+
+# VsCode
+.vscode/extensions/
