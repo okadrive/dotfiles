@@ -7,6 +7,13 @@ alias bh='vim ~/.bash_history'
 alias mysql='mysql -u root -proot'
 alias rm='rm -i'
 
+function gtest() {
+  g++-9 ./main_test.cpp
+  ./a.out
+}
+alias gtest=gtest
+
+
 #PATH=$HOME/bin:$PATH
 #export PATH
 GOPATH=$HOME/go
