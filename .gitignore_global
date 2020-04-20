@@ -16,3 +16,11 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
