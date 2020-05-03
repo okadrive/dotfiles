@@ -6,6 +6,8 @@ alias bp='vim ~/.bash_profile'
 alias bh='vim ~/.bash_history'
 alias mysql='mysql -u root -proot'
 alias rm='rm -i'
+# .DS_Store を一括削除
+alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
 function cpptest() {
   g++-9 ./main_test.cpp

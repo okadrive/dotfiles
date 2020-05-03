@@ -1,3 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/Users/okapy/dotfiles/.vscode/extensions'
+let g:netrw_dirhistcnt =3
