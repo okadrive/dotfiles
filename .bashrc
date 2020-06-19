@@ -3,22 +3,21 @@ alias la='ls -a'
 alias br='vim ~/.bashrc'
 alias sbr='source ~/.bashrc'
 alias bp='vim ~/.bash_profile'
+alias sbp='source ~/.bash_profile'
 alias bh='vim ~/.bash_history'
 alias mysql='mysql -u root -proot'
 alias rm='rm -i'
 # .DS_Store を一括削除
 alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
+# for atcoder test
 function cpptest() {
   g++-9 ./main_test.cpp
   ./a.out
 }
 alias cpptest=cpptest
 
-#PATH=$HOME/bin:$PATH
-#export PATH
 GOPATH=$HOME/go
-#export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:$HOME/bin:$GOPATH/bin:$GOPATH/1.13.0/bin/
 
 # enable color support of ls and also add handy aliases
@@ -90,6 +89,11 @@ peco-history() {
     history -d $((HISTCMD-1))
   fi
 }
+
+#scp時、「bind: 警告: 行編集が有効になっていません」対策
+if [ -z "$PS1" ]; then
+  return;
+fi
 
 bind '"\C-r":"peco-history\n"'
 bind '"\C-xr": reverse-search-history'
