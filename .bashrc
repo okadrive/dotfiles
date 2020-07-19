@@ -17,8 +17,8 @@ function cpptest() {
 }
 alias cpptest=cpptest
 
-GOPATH=$HOME/go
-export PATH=$PATH:$HOME/bin:$GOPATH/bin:$GOPATH/1.13.0/bin/
+GOPATH=$HOME/.anyenv/envs/goenv/versions/1.13.0/
+export PATH=$PATH:$HOME/bin:$GOPATH/bin/:$HOME/go/1.13.0/bin/
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

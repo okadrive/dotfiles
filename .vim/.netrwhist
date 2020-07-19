@@ -1,2 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/okapy/.emacs.d'
+let g:netrw_dirhist_7='/Users/okapy/Desktop/lab/hyper/1000-1000/duplicate_node'
+let g:netrw_dirhist_6='/Users/okapy/Desktop/lab/hyper/100-100'
+let g:netrw_dirhist_5='/Users/okapy/Desktop/lab/hyper/100-100/step-count'
+let g:netrw_dirhist_4='/Users/okapy/workspace/user_side/android/app/src/main/res/mipmap-anydpi-v26'
