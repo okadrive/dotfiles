@@ -95,8 +95,11 @@ if [ -z "$PS1" ]; then
   return;
 fi
 
-bind '"\C-r":"peco-history\n"'
-bind '"\C-xr": reverse-search-history'
+if which peco >& /dev/null && [[ -t 1 ]]; then
+  # setup functions and key binds for peco
+  bind '"\C-r":"peco-history\n"'
+  bind '"\C-xr": reverse-search-history'
+fi
 
 # ssh with using peco for bash
 peco-ssh() {
