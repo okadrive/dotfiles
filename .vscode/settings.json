@@ -44,7 +44,7 @@
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "editor.renderControlCharacters": true,
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
