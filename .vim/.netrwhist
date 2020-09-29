@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/okapy/.ssh'
+let g:netrw_dirhist_9='/Users/okapy/.ipython/extensions'
 let g:netrw_dirhist_8='/Users/okapy/.emacs.d'
 let g:netrw_dirhist_7='/Users/okapy/Desktop/lab/hyper/1000-1000/duplicate_node'
 let g:netrw_dirhist_6='/Users/okapy/Desktop/lab/hyper/100-100'

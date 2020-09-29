@@ -17,8 +17,8 @@ function cpptest() {
 }
 alias cpptest=cpptest
 
-GOPATH=$HOME/.anyenv/envs/goenv/versions/1.13.0/
-export PATH=$PATH:$HOME/bin:$GOPATH/bin/:$HOME/go/1.13.0/bin/
+GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin/
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -51,7 +51,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 
 # change hostname color
-PS1='\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01m\]\w\[\033[31m\]$(__git_ps1)\n\[\033[01;32m\]\\$\[\033[00m\] '
+PS1='\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01m\]\w\[\033[31m\]$(__git_ps1)\e[1;36m[\t]\n\[\033[01;32m\]\\$\[\033[00m\] '
 
 export HISTCONTROL=ignoreboth:erasedups # 重複履歴を無視
 HISTSIZE=5000 # history に記憶するコマンド数
