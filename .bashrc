@@ -51,7 +51,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 
 # change hostname color
-PS1='\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01m\]\w\[\033[31m\]$(__git_ps1)\e[1;36m[\t]\n\[\033[01;32m\]\\$\[\033[00m\] '
+PS1='\[\033[36m\]\u@\h\[\033[00m\]:\[\033[01m\]\w\[\033[31m\]$(__git_ps1)\e[1;36m\n\[\033[01;32m\]\\$\[\033[00m\] '
 
 export HISTCONTROL=ignoreboth:erasedups # 重複履歴を無視
 HISTSIZE=5000 # history に記憶するコマンド数
