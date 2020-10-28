@@ -12,7 +12,7 @@ alias dsstore="find . -name '*.DS_Store' -type f -ls -delete"
 
 # for atcoder test
 function cpptest() {
-  g++-9 ./main_test.cpp
+  g++ ./main_test.cpp
   ./a.out
 }
 alias cpptest=cpptest
