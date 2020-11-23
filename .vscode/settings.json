@@ -57,5 +57,10 @@
   "editor.copyWithSyntaxHighlighting": false,
   "python.pythonPath": "/Users/okapy/.anyenv/envs/pyenv/shims/python",
   "workbench.colorTheme": "Visual Studio Dark",
-  "go.formatTool": "goimports"
+  "go.formatTool": "goimports",
+  "vsnotes.defaultNotePath": "/Users/okapy/Desktop/lab/m2",
+  "editor.rulers": [
+    
+  
+  ]
 }

@@ -12,8 +12,13 @@ James-Yu.latex-workshop
 joaompinto.vscode-graphviz
 MS-CEINTL.vscode-language-pack-ja
 ms-python.python
+ms-toolsai.jupyter
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
 ms-vscode.cpptools
 mushan.vscode-paste-image
+patricklee.vsnotes
+PKief.material-icon-theme
 Shan.code-settings-sync
 shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
