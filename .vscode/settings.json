@@ -49,7 +49,7 @@
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 5000,
+  "files.autoSaveDelay": 1000,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "workbench.iconTheme": "material-icon-theme",
