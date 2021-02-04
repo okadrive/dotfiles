@@ -8,6 +8,7 @@
 *.un~
 Session.vim
 .netrwhist
+.vim/.netrwhist
 # Emacs
 .\#*
 
@@ -41,3 +42,4 @@ Thumbs.db
 
 # VsCode
 .vscode/extensions/
+.vscode-insiders/extensions/

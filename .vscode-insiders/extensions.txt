@@ -1,4 +1,3 @@
-austin.code-gnu-global
 bierner.markdown-preview-github-styles
 christian-kohler.path-intellisense
 CoenraadS.bracket-pair-colorizer-2
@@ -20,5 +19,4 @@ Shan.code-settings-sync
 shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
 torn4dom4n.latex-support
-WallabyJs.quokka-vscode
 yzane.markdown-pdf

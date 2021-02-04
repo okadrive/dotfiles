@@ -1,5 +1,5 @@
 {
-  "markdown-pdf.styles": ["file:///Users/okapy/.vscode/markdown-pdf.css"],
+  "markdown-pdf.styles": ["file:///Users/okapy/.vscode-insiders/markdown-pdf.css"],
   "latex-workshop.latex.tools": [
     {
       "name": "ptex2pdf",
