@@ -40,10 +40,10 @@ SAVEHIST=1000000
 ARCH=`uname -m`
 # 2行表示
 if [[ $ARCH == 'arm64' ]]; then
-    PROMPT="%{${fg[cyan]}%}%n@%m%{${reset_color}%}[arm]:%~
+    PROMPT="%{${fg[cyan]}%}%n@%m%{${fg[magenta]}%}(arm)%{${reset_color}%}:%~
 %{${fg[green]}%}$ %{${reset_color}%}"
 else
-    PROMPT="%{${fg[cyan]}%}%n@%m%{${reset_color}%}[x86]:%~
+    PROMPT="%{${fg[cyan]}%}%n@%m%{${fg[magenta]}%}(x86)%{${reset_color}%}:%~
 %{${fg[green]}%}$ %{${reset_color}%}"
 fi
 
