@@ -2,9 +2,12 @@
 # $code --list-extensions > extensions.txt
 
 # vscodeがインストールされている場合のみ
-if [ -e ~/Library/Application\ Support/Code/User ]; then
-    cd ~/Library/Application\ Support/Code/User
+#if [ -e ~/Library/Application\ Support/Code/User ]; then
+#    cd ~/Library/Application\ Support/Code/User
 
+# for M1 Mac: vscode insiders
+if [ -e ~/Library/Application\ Support/Code\ -\ Insiders/User ]; then
+    cd ~/Library/Application\ Support/Code\ -\ Insiders/User
     # 前の設定をバックアップ
     mv settings.json settings.json.bak
     mv keybindings.json keybindings.json.bak
@@ -19,6 +22,7 @@ if [ -e ~/Library/Application\ Support/Code/User ]; then
 
     # 他マシンで書き出されたエクステンション一覧を使ってインストール
     for extension in `cat ~/dotfiles/.vscode/extensions.txt`; do
-        code --install-extension $extension
+        #code --install-extension $extension
+        code-insiders --install-extension $extension
     done
 fi
