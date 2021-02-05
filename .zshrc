@@ -7,6 +7,7 @@ eval "$(anyenv init -)"
 
 # M1 Mac
 export PATH=/opt/homebrew/bin:$PATH
+export PATH=/usr/local/texlive/2020/bin/custom:$PATH
 alias code='code-insiders'
 
 # for atcoder test
