@@ -10,27 +10,31 @@ export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/texlive/2020/bin/custom:$PATH
 alias code='code-insiders'
 
-# for atcoder test
-function cpptest() {
-  g++ ./main_test.cpp
-  ./a.out
+# C++ shortcut
+g() {
+    g++ main.cpp
+}
+
+gtest() {
+    g++ ./main_test.cpp
+    ./a.out
 }
 
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
 if [ -x /usr/bin/dircolors ]; then
-     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-     alias ls='ls --color=auto'
-   else
-     alias ls='ls -G'
-     alias ll='ls -lG'
-     alias la='ls -laG'
-     export LSCOLORS=gxcxbEaEFxxEhEhBaDaCaD
-   fi
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+else
+    alias ls='ls -G'
+    alias ll='ls -lG'
+    alias la='ls -laG'
+    export LSCOLORS=gxcxbEaEFxxEhEhBaDaCaD
+fi
 
 # emacs 風キーバインドにする
-bindkey -e
+#bindkey -e
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -146,7 +150,7 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-function peco-cd {
+function peco-cd() {
     local sw="1"
     while [ "$sw" != "0" ]
     do
@@ -178,8 +182,29 @@ function peco-cd {
             local sw=$(($sw-2))
         fi
     done
+    zle clear-screen
 }
-alias sd="peco-cd"
+zle -N peco-cd
+bindkey 'sd' peco-cd
+
+function peco-ssh() {
+  local selected_host=$(awk '
+  tolower($1)=="host" {
+    for (i=2; i<=NF; i++) {
+      if ($i !~ "[*?]") {
+        print $i
+      }
+    }
+  }
+  ' ~/.ssh/config | sort | peco --query "$LBUFFER")
+  if [ -n "$selected_host" ]; then
+    BUFFER="ssh ${selected_host}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-ssh
+bindkey 'SS' peco-ssh
 
 # エイリアス
 
