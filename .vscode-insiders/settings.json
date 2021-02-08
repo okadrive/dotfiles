@@ -58,5 +58,12 @@
   "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, SpaceBeforeParens: ControlStatements, IndentWidth: 2 }",
   "editor.copyWithSyntaxHighlighting": false,
   "workbench.colorTheme": "Visual Studio Dark",
-  "go.formatTool": "goimports"
+  "go.formatTool": "goimports",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter-notebook",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "python.insidersChannel": "weekly"
 }
