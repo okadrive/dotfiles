@@ -31,6 +31,7 @@ else
     alias ll='ls -lG'
     alias la='ls -laG'
     export LSCOLORS=gxcxbEaEFxxEhEhBaDaCaD
+    export LS_COLORS="di=36:ln=32:so=31;1;44:pi=30;1;44:ex=1;35:bd=0;1;44:cd=37;1;44:su=37;1;41:sg=30;1;43:tw=30;1;42:ow=30;1;43"
 fi
 
 # emacs 風キーバインドにする
@@ -66,7 +67,7 @@ autoload -Uz compinit
 compinit
 
 # zshの補完候補にls --colorsと同じ色をつける
-zstyle ':completion:*' list-colors "${LSCOLORS}" # 補完候補のカラー表示
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # 補完候補のカラー表示
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
