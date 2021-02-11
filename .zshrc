@@ -5,6 +5,10 @@ export LANG=ja_JP.UTF-8
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
 
+# golang
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+
 # M1 Mac
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/texlive/2020/bin/custom:$PATH
@@ -205,7 +209,7 @@ function peco-ssh() {
   zle clear-screen
 }
 zle -N peco-ssh
-bindkey 'SS' peco-ssh
+bindkey 'ss' peco-ssh
 
 # エイリアス
 
