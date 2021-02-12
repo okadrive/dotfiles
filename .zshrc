@@ -190,7 +190,7 @@ function peco-cd() {
     zle clear-screen
 }
 zle -N peco-cd
-bindkey 'sd' peco-cd
+bindkey '^e' peco-cd
 
 function peco-ssh() {
   local selected_host=$(awk '
@@ -209,7 +209,7 @@ function peco-ssh() {
   zle clear-screen
 }
 zle -N peco-ssh
-bindkey 'ss' peco-ssh
+bindkey '^s' peco-ssh
 
 # エイリアス
 
