@@ -225,8 +225,10 @@ alias mv='mv -i'
 
 alias mkdir='mkdir -p'
 
+# custom alias
 alias zr='vim ~/.zshrc'
 alias sr='source ~/.zshrc'
+alias gs='git status'
 alias c='clear'
 
 # sudo の後のコマンドでエイリアスを有効にする
