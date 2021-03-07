@@ -65,5 +65,6 @@
       "filenamePattern": "*.ipynb"
     }
   ],
-  "python.insidersChannel": "weekly"
+  "python.insidersChannel": "weekly",
+  "terminal.integrated.inheritEnv": false
 }
