@@ -66,5 +66,7 @@
     }
   ],
   "python.insidersChannel": "weekly",
-  "terminal.integrated.inheritEnv": false
+  "terminal.integrated.inheritEnv": false,
+  "go.toolsManagement.autoUpdate": true,
+  "python.terminal.activateEnvironment": false
 }
