@@ -59,12 +59,9 @@
   "editor.copyWithSyntaxHighlighting": false,
   "workbench.colorTheme": "Visual Studio Dark",
   "go.formatTool": "goimports",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter-notebook",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   "python.insidersChannel": "weekly",
   "terminal.integrated.inheritEnv": false,
   "go.toolsManagement.autoUpdate": true,

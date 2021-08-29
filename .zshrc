@@ -12,7 +12,6 @@ export PATH="$PATH:$GOPATH/bin"
 # M1 Mac
 export PATH=/opt/homebrew/bin:$PATH
 export PATH=/usr/local/texlive/2020/bin/custom:$PATH
-alias code='code-insiders'
 
 # C++ shortcut
 g() {
@@ -52,9 +51,11 @@ ARCH=`uname -m`
 if [[ $ARCH == 'arm64' ]]; then
     PROMPT="%{${fg[cyan]}%}%n@%m%{${fg[magenta]}%}(arm)%{${reset_color}%}:%~
 %{${fg[green]}%}$ %{${reset_color}%}"
+    alias brew="PATH=/opt/homebrew/bin brew"
 else
     PROMPT="%{${fg[cyan]}%}%n@%m%{${fg[magenta]}%}(x86)%{${reset_color}%}:%~
 %{${fg[green]}%}$ %{${reset_color}%}"
+    alias brew="PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin brew"
 fi
 
 # 単語の区切り文字を指定する
