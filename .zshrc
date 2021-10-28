@@ -10,16 +10,17 @@ export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
 # M1 Mac
-export PATH=/opt/homebrew/bin:$PATH
-export PATH=/usr/local/texlive/2020/bin/custom:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/usr/local/texlive/2020/bin/custom:$PATH"
 
 # C++ shortcut
 g() {
-    g++ main.cpp
+    g++ main.cpp -mmacosx-version-min=11.4
 }
 
 gt() {
-    g++ ./main_test.cpp
+    g++ ./main_test.cpp -mmacosx-version-min=11.4
     ./a.out
 }
 
