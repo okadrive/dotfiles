@@ -1,1 +1,2 @@
 /Users/okapy/.anyenv/envs/pyenv/versions/miniforge3-4.9.2
+/Users/okapy/.anyenv/envs/pyenv/versions/miniforge3-4.9.2/envs/ds_env

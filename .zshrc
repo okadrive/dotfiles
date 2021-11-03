@@ -9,10 +9,16 @@ eval "$(anyenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
+# python
+export PATH="/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
+
 # M1 Mac
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/usr/local/texlive/2020/bin/custom:$PATH"
+
+# erace duplicate path
+typeset -U PATH
 
 # C++ shortcut
 g() {
