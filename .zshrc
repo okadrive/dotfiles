@@ -15,18 +15,17 @@ export PATH="/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
 # M1 Mac
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/usr/local/texlive/2020/bin/custom:$PATH"
 
 # erace duplicate path
 typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ main.cpp -mmacosx-version-min=11.4
+    g++ main.cpp -mmacosx-version-min=12.0
 }
 
 gt() {
-    g++ ./main_test.cpp -mmacosx-version-min=11.4
+    g++ ./main_test.cpp -mmacosx-version-min=12.0
     ./a.out
 }
 
