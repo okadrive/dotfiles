@@ -16,16 +16,19 @@ export PATH="/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
+# lima for Docker
+export DOCKER_HOST=unix:///${HOME}/.lima/docker/sock/docker.sock
+
 # erace duplicate path
 typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ main.cpp -mmacosx-version-min=12.0
+    g++ main.cpp -mmacosx-version-min=12.3
 }
 
 gt() {
-    g++ ./main_test.cpp -mmacosx-version-min=12.0
+    g++ ./main_test.cpp -mmacosx-version-min=12.3
     ./a.out
 }
 
