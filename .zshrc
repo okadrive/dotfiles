@@ -19,16 +19,19 @@ export PATH="/opt/homebrew/sbin:$PATH"
 # lima for Docker
 export DOCKER_HOST=unix:///${HOME}/.lima/docker/sock/docker.sock
 
+# wasi-sdk
+#export PATH="/opt/wasi-sdk:$PATH"
+
 # erace duplicate path
 typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ main.cpp -mmacosx-version-min=12.3
+    g++ main.cpp -mmacosx-version-min=12.4
 }
 
 gt() {
-    g++ ./main_test.cpp -mmacosx-version-min=12.3
+    g++ ./main_test.cpp -mmacosx-version-min=12.4
     ./a.out
 }
 
@@ -240,6 +243,7 @@ alias zr='vim ~/.zshrc'
 alias sr='source ~/.zshrc'
 alias gs='git status'
 alias c='clear'
+alias dsstore='find . -name 'a.out' -type f -ls -delete'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
@@ -291,3 +295,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
