@@ -27,11 +27,11 @@ typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ main.cpp -mmacosx-version-min=12.4
+    g++ main.cpp -mmacosx-version-min=13.0
 }
 
 gt() {
-    g++ ./main_test.cpp -mmacosx-version-min=12.4
+    g++ ./main_test.cpp -mmacosx-version-min=13.0
     ./a.out
 }
 
@@ -240,6 +240,7 @@ alias mkdir='mkdir -p'
 
 # custom alias
 alias zr='vim ~/.zshrc'
+alias zh='vim ~/.zsh_history'
 alias sr='source ~/.zshrc'
 alias gs='git status'
 alias c='clear'
@@ -282,14 +283,14 @@ esac
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/okapy/.anyenv/envs/pyenv/versions/miniforge3-4.9.2/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/okapy/.anyenv/envs/pyenv/versions/miniforge3-4.9.2/etc/profile.d/conda.sh" ]; then
-        . "/Users/okapy/.anyenv/envs/pyenv/versions/miniforge3-4.9.2/etc/profile.d/conda.sh"
+    if [ -f "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/etc/profile.d/conda.sh" ]; then
+        . "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/okapy/.anyenv/envs/pyenv/versions/miniforge3-4.9.2/bin:$PATH"
+        export PATH="/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/bin:$PATH"
     fi
 fi
 unset __conda_setup
