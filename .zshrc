@@ -16,9 +16,6 @@ export PATH="/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
-# lima for Docker
-export DOCKER_HOST=unix:///${HOME}/.lima/docker/sock/docker.sock
-
 # wasi-sdk
 #export PATH="/opt/wasi-sdk:$PATH"
 
@@ -27,11 +24,11 @@ typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ main.cpp -mmacosx-version-min=13.0
+    g++ -Wl,-ld_classic main.cpp -mmacosx-version-min=14.0
 }
 
 gt() {
-    g++ ./main_test.cpp -mmacosx-version-min=13.0
+    g++ -Wl,-ld_classic ./main_test.cpp -mmacosx-version-min=14.0
     ./a.out
 }
 
@@ -283,17 +280,18 @@ esac
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-23.3.1-1/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/etc/profile.d/conda.sh" ]; then
-        . "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/etc/profile.d/conda.sh"
+    if [ -f "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-23.3.1-1/etc/profile.d/conda.sh" ]; then
+        . "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-23.3.1-1/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-22.11.1-4/bin:$PATH"
+        export PATH="/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-23.3.1-1/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+export PATH="/opt/homebrew/sbin:$PATH"
