@@ -1,69 +1,47 @@
 {
-  "markdown-pdf.styles": ["file:///Users/okapy/.vscode-insiders/markdown-pdf.css"],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "ptex2pdf",
-      "command": "ptex2pdf",
-      "args": ["-l", "-ot", "-kanji=utf8 -synctex=1", "%DOC%"]
-    },
-    {
-      "name": "latexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "pbibtex",
-      "command": "pbibtex",
-      "args": ["%DOCFILE%"]
-    }
-  ],
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "toolchain with bib",
-      "tools": ["ptex2pdf", "pbibtex", "ptex2pdf", "ptex2pdf"]
-    },
-    {
-      "name": "ptex2pdf",
-      "tools": ["ptex2pdf"]
-    }
-  ],
-  "latex-workshop.latex.autoClean.run": "onFailed",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "window.zoomLevel": 2,
   "editor.renderControlCharacters": true,
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "C_Cpp.updateChannel": "Insiders",
-  "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, SpaceBeforeParens: ControlStatements, IndentWidth: 2 }",
   "editor.copyWithSyntaxHighlighting": false,
-  "workbench.colorTheme": "Visual Studio Dark",
+  "editor.linkedEditing": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, ColumnLimit: 100, SpaceBeforeParens: ControlStatements, IndentWidth: 2 }",
   "go.formatTool": "goimports",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
-  "python.insidersChannel": "weekly",
-  "terminal.integrated.inheritEnv": false,
   "go.toolsManagement.autoUpdate": true,
-  "python.terminal.activateEnvironment": false
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.inheritEnv": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "http.proxySupport": "off",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnSave": true
+  },
+  "editor.fontFamily": "Menlo, Monaco, YuGothic, 'Courier New', monospace",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "cpp": true,
+    "python": true,
+    "json": true
+  },
+  "window.zoomLevel": 1,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlineSuggest.showToolbar": "always",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
