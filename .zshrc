@@ -12,7 +12,7 @@ export PATH="$PATH:$GOPATH/bin"
 # python
 export PATH="/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
 
-# M1 Mac
+# for M1 or later Mac
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
 
@@ -294,4 +294,3 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-export PATH="/opt/homebrew/sbin:$PATH"
