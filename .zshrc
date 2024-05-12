@@ -24,11 +24,11 @@ typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ -Wl,-ld_classic main.cpp -mmacosx-version-min=14.0
+    g++ -Wl, ./main.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
 }
 
 gt() {
-    g++ -Wl,-ld_classic ./main_test.cpp -mmacosx-version-min=14.0
+    g++ -Wl, ./main_test.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
     ./a.out
 }
 
