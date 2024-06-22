@@ -3,12 +3,24 @@
 	excludesfile = /Users/okapy/.gitignore_global
 [merge]
   tool = vimdiff
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = okapy
 	email = 36099852+okadrive@users.noreply.github.com
+[alias]
+    gs = git status
+	ga = git add
+	gaa = git add .
+	gc = git commit
+	gcm = git commit -m
+	gp = git push
+	gpl = git pull
+	gb = git branch
+	gco = git checkout
+	gd = git diff
+	gds = git diff --staged
+	gm = git merge
+	gl = git log
+	gs = git status
+
+[rebase]
+  autosquash = true

@@ -205,35 +205,17 @@ function peco-cd() {
 zle -N peco-cd
 bindkey '^w' peco-cd
 
-function peco-ssh() {
-  local selected_host=$(awk '
-  tolower($1)=="host" {
-    for (i=2; i<=NF; i++) {
-      if ($i !~ "[*?]") {
-        print $i
-      }
-    }
-  }
-  ' ~/.ssh/config | sort | peco --query "$LBUFFER")
-  if [ -n "$selected_host" ]; then
-    BUFFER="ssh ${selected_host}"
-    zle accept-line
-  fi
-  zle clear-screen
-}
-zle -N peco-ssh
-bindkey '^s' peco-ssh
-
-# エイリアス
-
-alias la='ls -a'
-alias ll='ls -l'
-
+# alias
+alias c='clear'
+alias br='vim ~/.bashrc'
+alias sbr='source ~/.bashrc'
+alias bp='vim ~/.bash_profile'
+alias bh='vim ~/.bash_history'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-
 alias mkdir='mkdir -p'
+alias grep='grep --color=auto'
 
 # custom alias
 alias zr='vim ~/.zshrc'
