@@ -24,11 +24,19 @@ typeset -U PATH
 
 # C++ shortcut
 g() {
-    g++ -Wl, ./main.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+    if [[ $(uname -m) == 'arm64' ]]; then
+        g++ -Wl, ./main.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+    else
+        g++ -Wl, ./main.cpp
+    fi
 }
 
 gt() {
-    g++ -Wl, ./main_test.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+    if [[ $(uname -m) == 'arm64' ]]; then
+        g++ -Wl, ./main_test.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+    else
+        g++ -Wl, ./main_test.cpp
+    fi
     ./a.out
 }
 
