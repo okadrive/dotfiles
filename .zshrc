@@ -25,7 +25,7 @@ typeset -U PATH
 # C++ shortcut
 g() {
     if [[ $(uname -m) == 'arm64' ]]; then
-        g++ -Wl, -std=c++14 ./main.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+        g++ -std=c++14 ./main.cpp
     else
         g++ -Wl, ./main.cpp
     fi
@@ -33,7 +33,7 @@ g() {
 
 gt() {
     if [[ $(uname -m) == 'arm64' ]]; then
-        g++ -Wl, -std=c++14 ./main_test.cpp -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+        g++ -std=c++14 ./main_test.cpp
     else
         g++ -Wl, ./main_test.cpp
     fi
