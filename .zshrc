@@ -229,7 +229,6 @@ alias grep='grep --color=auto'
 alias zr='vim ~/.zshrc'
 alias zh='vim ~/.zsh_history'
 alias sr='source ~/.zshrc'
-alias gs='git status'
 alias c='clear'
 alias dsstore='find . -name 'a.out' -type f -ls -delete'
 
