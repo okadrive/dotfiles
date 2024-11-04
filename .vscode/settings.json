@@ -32,9 +32,9 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "cpp": true,
     "python": true,
-    "json": true
+    "json": true,
+    "cpp": false
   },
   "window.zoomLevel": 1,
   "[typescript]": {
