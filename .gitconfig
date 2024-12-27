@@ -1,8 +1,8 @@
 [core]
-  editor = vim
+	editor = vim
 	excludesfile = /Users/okapy/.gitignore_global
 [merge]
-  tool = vimdiff
+	tool = vimdiff
 [user]
 	name = okapy
 	email = 36099852+okadrive@users.noreply.github.com
@@ -23,4 +23,6 @@
 	gs = git status
 
 [rebase]
-  autosquash = true
+	autosquash = true
+[init]
+	defaultBranch = main
