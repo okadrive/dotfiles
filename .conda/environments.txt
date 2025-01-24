@@ -1,1 +1,1 @@
-/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.3.0-0
+/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1

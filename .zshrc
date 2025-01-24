@@ -269,14 +269,14 @@ esac
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.3.0-0/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.3.0-0/etc/profile.d/conda.sh" ]; then
-        . "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.3.0-0/etc/profile.d/conda.sh"
+    if [ -f "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/etc/profile.d/conda.sh" ]; then
+        . "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.3.0-0/bin:$PATH"
+        export PATH="/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/bin:$PATH"
     fi
 fi
 unset __conda_setup
