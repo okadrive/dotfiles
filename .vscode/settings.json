@@ -8,7 +8,7 @@
   "editor.linkedEditing": true,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, ColumnLimit: 100, SpaceBeforeParens: ControlStatements, IndentWidth: 2 }",
+  "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, ColumnLimit: 100, SpaceBeforeParens: ControlStatements, SortIncludes: false, IndentWidth: 2 }",
   "go.formatTool": "goimports",
   "go.toolsManagement.autoUpdate": true,
   "workbench.colorTheme": "Visual Studio Dark",
