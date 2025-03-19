@@ -167,12 +167,15 @@ setopt extended_glob
 setopt nonomatch
 
 # peco settings
-# 過去に実行したコマンドを選択しctrl-rにバインド
 function peco-select-history() {
-  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle clear-screen
+    local CMD=$(history -n 1 | sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//' | sort -u | peco)
+    CMD=$(echo $CMD | sed 's/^[[:space:]]*//')
+    if [[ -n "$CMD" ]]; then
+        BUFFER="$CMD"
+        CURSOR=${#BUFFER}
+    fi
 }
+
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
