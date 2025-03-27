@@ -1,19 +1,21 @@
 # 概要
 - dotfiles 管理用リポジトリ
 # 導入
-```
-$ git clone https://github.com/okadrive/dotfiles
-$ cd dotfiles
-$ ./install.sh
+```bash
+git clone https://github.com/okadrive/dotfiles
+cd dotfiles
+./install.sh
 ```
 ## Tips
-- [最強の dotfiles 駆動開発と GitHub で管理する運用方法](https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2)
-## memo
-- submodule のアップデート
+- Update submodules
 ```
-$ git submodule update --init --recursive
+git submodule update --init --recursive
 ```
-- brewの再構築
+- Save to Brewfile
 ```
-$ brew file install Brewfile
+brew bundle dump --file=~/Brewfile --force
+```
+
+```bash
+brew bundle --file=~/Brewfile
 ```
