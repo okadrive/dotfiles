@@ -26,3 +26,5 @@
 	autosquash = true
 [init]
 	defaultBranch = main
+[credential]
+	helper = osxkeychain
