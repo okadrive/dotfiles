@@ -2,8 +2,15 @@
 export LANG=ja_JP.UTF-8
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
+if [ -e "$HOME/.anyenv" ]
+then
+    export ANYENV_ROOT="$HOME/.anyenv"
+    export PATH="$ANYENV_ROOT/bin:$PATH"
+    if command -v anyenv 1>/dev/null 2>&1
+    then
+        eval "$(anyenv init -)"
+    fi
+fi
 
 # golang
 export PATH="$GOROOT/bin:$PATH"
@@ -267,20 +274,3 @@ case ${OSTYPE} in
         alias ls='ls --color=auto'
         ;;
 esac
-
-# vim:set ft=zsh:
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/etc/profile.d/conda.sh" ]; then
-        . "/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/okapy/dotfiles/.anyenv/envs/pyenv/versions/miniforge3-24.11.2-1/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
