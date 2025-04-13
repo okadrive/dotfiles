@@ -55,7 +55,7 @@ setopt no_beep no_flow_control ignore_eof interactive_comments auto_cd auto_push
 
 # peco ヒストリ検索
 function peco-select-history() {
-    local CMD=$(history -n 1 | sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//' | sort -u | peco)
+    local CMD=$(history -n 1 | LANG=C sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//' | sort -u | peco)
     [[ -n "$CMD" ]] && BUFFER="$CMD" && CURSOR=${#BUFFER}
 }
 zle -N peco-select-history
