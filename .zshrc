@@ -50,8 +50,8 @@ zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 # オプション設定
 setopt no_beep no_flow_control ignore_eof interactive_comments auto_cd auto_pushd \
-       pushd_ignore_dups share_history hist_ignore_all_dups hist_ignore_space \
-       hist_reduce_blanks extended_glob nonomatch
+    pushd_ignore_dups share_history hist_ignore_all_dups hist_ignore_space \
+    hist_reduce_blanks extended_glob nonomatch
 
 # peco ヒストリ検索
 function peco-select-history() {
