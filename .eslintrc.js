@@ -6,7 +6,7 @@ module.exports = {
   extends: ['eslint:recommended', 'prettier'],
   plugins: ['prettier'],
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   rules: {
@@ -17,6 +17,6 @@ module.exports = {
         trailingComma: 'es5',
       },
     ],
-      "no-console": 0
+    'no-console': 'off',
   },
 };
