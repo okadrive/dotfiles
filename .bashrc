@@ -82,8 +82,8 @@ HISTTIMEFORMAT='%Y.%m.%d %T' # history に時間を追加
 # generate peco CMD for bash
 # peco-history
 function peco-history() {
-    local CMD=$(fc -l -n 1 | awk '{$1=""; print $0}' | sort | uniq | peco)
-    READLINE_LINE=$CMD
+    local CMD=$(fc -l -n 1 | cut -d' ' -f2- | sort | uniq | peco)
+    READLINE_LINE=$CMD
     READLINE_POINT=${#CMD}
 }
 
