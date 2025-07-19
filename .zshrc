@@ -1,6 +1,6 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
-export PATH="$HOME/.anyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$GOROOT/bin:$GOPATH/bin:/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.anyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$GOROOT/bin:$GOPATH/bin:/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
 
 # anyenv
 [ -e "$HOME/.anyenv" ] && eval "$(anyenv init -)"
