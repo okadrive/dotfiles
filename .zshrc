@@ -1,9 +1,14 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
-export PATH="$HOME/.local/bin:$HOME/.anyenv/bin:/opt/homebrew/bin:/opt/homebrew/sbin:$GOROOT/bin:$GOPATH/bin:/Users/okapy/.anyenv/envs/pyenv/shims:$PATH"
 
 # anyenv
 [ -e "$HOME/.anyenv" ] && eval "$(anyenv init -)"
+
+# 追加のPATH設定（anyenv init後に実行）
+export PATH="$HOME/.local/bin:$PATH"
+
+# PATH重複除去
+typeset -U path PATH
 
 # ヒストリ設定
 HISTFILE=~/.zsh_history
