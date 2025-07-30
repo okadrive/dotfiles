@@ -13,9 +13,6 @@
   "go.toolsManagement.autoUpdate": true,
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.inheritEnv": false,
-  "security.workspace.trust.untrustedFiles": "open",
-  "http.proxySupport": "off",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -23,8 +20,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.defaultFormatter": null,
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": null
   },
   "editor.fontFamily": "Menlo, Monaco, YuGothic, 'Courier New', monospace",
   "github.copilot.enable": {
