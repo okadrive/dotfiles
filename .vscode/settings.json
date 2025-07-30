@@ -31,11 +31,14 @@
     "*": true,
     "plaintext": false,
     "markdown": false,
-    "scminput": false,
+    "scminput": true,
     "python": true,
     "json": true,
     "cpp": false
   },
+  "git.enableSmartCommit": true,
+  "git.suggestSmartCommit": true,
+  "scm.inputFontFamily": "editor",
   "window.zoomLevel": 1,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
