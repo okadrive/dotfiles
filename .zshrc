@@ -1,13 +1,3 @@
-export LANG=ja_JP.UTF-8
-
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-[ -e "$HOME/.anyenv" ] && eval "$(anyenv init -)"
-
-export PATH="$HOME/.local/bin:$PATH"
-
-typeset -U path PATH
-
 # ヒストリ設定
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -39,8 +29,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
 else
     alias ls='ls -G'
-    export LSCOLORS=gxcxbEaEFxxEhEhBaDaCaD
-    export LS_COLORS="di=36:ln=32:so=31;1;44:pi=30;1;44:ex=1;35:bd=0;1;44:cd=37;1;44:su=37;1;41:sg=30;1;43:tw=30;1;42:ow=30;1;43"
 fi
 
 # 補完設定
@@ -86,6 +74,5 @@ fi
 
 # OS 別設定
 case ${OSTYPE} in
-    darwin*) export CLICOLOR=1; alias ls='ls -G' ;;
     linux*) alias ls='ls --color=auto' ;;
 esac
