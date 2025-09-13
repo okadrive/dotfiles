@@ -3,6 +3,15 @@
     "Github": {
       "url": "https://api.githubcopilot.com/mcp/"
     },
+    "serena": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server"
+      ]
+    },
     "fetch": {
       "type": "stdio",
       "command": "uvx",
