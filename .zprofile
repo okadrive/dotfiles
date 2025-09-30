@@ -3,7 +3,16 @@ export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 
 # Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+if [[ $(uname -m) == "arm64" ]]; then
+    # Apple Silicon Mac
+    export PATH="/opt/homebrew/bin:$PATH"
+    export HOMEBREW_PREFIX="/opt/homebrew"
+else
+    # Intel Mac
+    export PATH="/usr/local/bin:$PATH"
+    export HOMEBREW_PREFIX="/usr/local"
+fi
 
 # anyenv (Multi-language environment manager)
 export PATH="$HOME/.anyenv/bin:$PATH"
