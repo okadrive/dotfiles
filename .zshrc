@@ -76,3 +76,13 @@ fi
 case ${OSTYPE} in
     linux*) alias ls='ls --color=auto' ;;
 esac
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+
+  export PATH="$(brew --prefix)/sbin:$PATH"
+fi
