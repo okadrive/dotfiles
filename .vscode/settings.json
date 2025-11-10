@@ -1,16 +1,19 @@
 {
   "editor.renderControlCharacters": true,
   "editor.wordWrap": "on",
-  "editor.suggestSelection": "first",
+  "editor.copyWithSyntaxHighlighting": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "editor.copyWithSyntaxHighlighting": false,
+  "editor.fontFamily": "Menlo, Monaco, YuGothic, 'Courier New', monospace",
+  "editor.inlineSuggest.showToolbar": "always",
   "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "C_Cpp.clang_format_style": "{AllowShortFunctionsOnASingleLine: None, AllowShortIfStatementsOnASingleLine: Always, AllowShortLambdasOnASingleLine: None, BasedOnStyle: Google, BreakBeforeBraces: Attach, ColumnLimit: 100, SpaceBeforeParens: ControlStatements, SortIncludes: false, IndentWidth: 2 }",
   "go.formatTool": "goimports",
   "go.toolsManagement.autoUpdate": true,
+  "scm.inputFontFamily": "editor",
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "material-icon-theme",
   "[javascript]": {
@@ -22,7 +25,6 @@
   "[python]": {
     "editor.defaultFormatter": null
   },
-  "editor.fontFamily": "Menlo, Monaco, YuGothic, 'Courier New', monospace",
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -34,12 +36,10 @@
   },
   "git.enableSmartCommit": true,
   "git.suggestSmartCommit": true,
-  "scm.inputFontFamily": "editor",
   "window.zoomLevel": 1,
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.inlineSuggest.showToolbar": "always",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   }
