@@ -43,3 +43,6 @@ Thumbs.db
 # VsCode
 .vscode/extensions/
 .vscode-insiders/extensions/
+
+# uv installer state
+/.config/uv/uv-receipt.json
