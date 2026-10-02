@@ -75,6 +75,6 @@ set noswapfile " ファイル編集中にスワップファイルを作らない
 "set mouse=a
 
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=ucs-bom,utf-8,cp932,euc-jp
 set fileformats=unix,dos,mac
 
